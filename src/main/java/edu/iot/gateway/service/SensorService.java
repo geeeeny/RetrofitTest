@@ -1,7 +1,9 @@
 package edu.iot.gateway.service;
 
 import java.util.List;
+import java.util.Map;
 
+import edu.iot.gateway.model.LocationStatus;
 import edu.iot.gateway.model.Sensor;
 
 public interface SensorService {
@@ -14,4 +16,6 @@ public interface SensorService {
 	boolean update(Sensor sensor) throws Exception;
 	
 	boolean delete(int id) throws Exception;
+
+	Map<String, LocationStatus> getLocationStatus();
 }

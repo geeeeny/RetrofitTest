@@ -3,6 +3,8 @@ package edu.iot.gateway.controller;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.annotation.Resource;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -16,7 +18,9 @@ import edu.iot.gateway.service.SensorService;
 @RestController
 @RequestMapping("/api/sensor")
 public class SensorApiController {
-	@Autowired
+	//SensorServiceImpl, SensorServiceSqliteImpl은 타입이 같음. 따라서 byName방식의 @Resource로 매핑해야 함
+	//@Autowired
+	@Resource(name="sensorService") 
 	SensorService service;
 	
 	@RequestMapping(method=RequestMethod.GET)

@@ -1,4 +1,4 @@
-package edu.iot.gateway.service;
+package edu.iot.gateway.api;
 
 import java.util.List;
 import edu.iot.gateway.model.Sensor;
